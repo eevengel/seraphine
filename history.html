@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Larissa Strange | Historia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #101a32;
+  color: #f1ebdd;
+  font-family: 'Cormorant Garamond', serif;
+  padding: 35px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 950px;
+  margin: auto;
+  border: 1px solid #c5a568;
+  outline: 1px solid #c5a568;
+  outline-offset: 6px;
+  padding: 40px;
+}
+
+a {
+  color: #c5a568;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.back {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+header {
+  text-align: center;
+  padding: 55px 0 35px;
+}
+
+.symbol {
+  font-size: 43px;
+  color: #c5a568;
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  font-family: 'Cinzel', serif;
+  color: #c5a568;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(30px, 5vw, 46px);
+  margin: 18px 0;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-style: italic;
+  color: #c5a568;
+}
+
+.divider {
+  width: 100px;
+  height: 1px;
+  background: #c5a568;
+  margin: 28px auto;
+}
+
+.intro {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 55px;
+  font-size: 20px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.section-label {
+  font-family: 'Cinzel', serif;
+  color: #c5a568;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* TIMELINE */
+
+.timeline {
+  position: relative;
+  max-width: 750px;
+  margin: auto;
+  padding-left: 35px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  bottom: 10px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #c5a568 8%,
+    #c5a568 90%,
+    transparent
+  );
+}
+
+.event {
+  position: relative;
+  margin-bottom: 38px;
+  animation: appear .8s ease both;
+}
+
+.event::before {
+  content: "✧";
+  position: absolute;
+  left: -36px;
+  top: 4px;
+  color: #c5a568;
+  font-size: 17px;
+  background: #101a32;
+}
+
+.event-card {
+  border: 1px solid #45516a;
+  background: #172440;
+  padding: 23px;
+  transition: .3s;
+}
+
+.event-card:hover {
+  border-color: #c5a568;
+  transform: translateX(4px);
+}
+
+.event-number {
+  font-family: 'Cinzel', serif;
+  color: #c5a568;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.event h2 {
+  font-size: 22px;
+  margin: 10px 0 15px;
+  color: #f1ebdd;
+}
+
+.event p {
+  font-size: 19px;
+  line-height: 1.65;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+.event p:last-child {
+  margin-bottom: 0;
+}
+
+details {
+  border-top: 1px solid #45516a;
+  margin-top: 18px;
+  padding-top: 12px;
+}
+
+summary {
+  cursor: pointer;
+  color: #c5a568;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: " ＋";
+}
+
+details[open] summary::after {
+  content: " −";
+}
+
+.detail-content {
+  padding-top: 15px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.quote {
+  text-align: center;
+  padding: 35px 20px;
+  margin: 45px 0;
+  border-top: 1px solid #806b48;
+  border-bottom: 1px solid #806b48;
+}
+
+.quote p {
+  font-size: 23px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.quote span {
+  display: block;
+  margin-top: 15px;
+  color: #c5a568;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 45px;
+}
+
+.navigation a {
+  border: 1px solid #806b48;
+  padding: 13px 18px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.navigation a:hover {
+  background: #c5a568;
+  color: #101a32;
+}
+
+footer {
+  text-align: center;
+  color: #c5a568;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 55px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width: 550px) {
+  .container {
+    padding: 22px;
+  }
+
+  .timeline {
+    padding-left: 28px;
+  }
+
+  .event::before {
+    left: -29px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="container">
+
+<a class="back" href="index.html">← VOLVER AL ARCHIVO</a>
+
+<header>
+  <div class="symbol">⟡ ✧ ⟡</div>
+
+  <p class="eyebrow">ARCHIVUM · MEMORIAE</p>
+
+  <h1>Historia y orígenes</h1>
+
+  <p class="subtitle">El legado de dos dimensiones</p>
+
+  <div class="divider"></div>
+
+  <p class="eyebrow">REGISTRO HISTÓRICO Nº 002</p>
+</header>
+
+<div class="intro">
+  Una existencia dividida entre dos herencias,
+  marcada por la búsqueda de excelencia,
+  el peso de un legado y el deseo de construir
+  una identidad propia.
+</div>
+
+<p class="section-label">CRONOLOGÍA DE UNA EXISTENCIA</p>
+
+<section class="timeline">
+
+  <article class="event">
+    <div class="event-card">
+      <span class="event-number">I · LOS ORÍGENES</span>
+      <h2>Una herencia extraordinaria</h2>
+
+      <p>
+        Nacida de la unión entre Clea y Stephen Strange,
+        Larissa nunca fue alguien normal. Ni de cerca.
+      </p>
+
+      <p>
+        Toda su vida se vio dividida entre el mundo de su
+        padre, donde pudo conseguir su educación, y los
+        murmullos de la Dimensión Oscura que acompañaban
+        su herencia materna.
+      </p>
+
+      <details>
+        <summary>REGISTRO COMPLEMENTARIO</summary>
+        <div class="detail-content">
+          Su naturaleza híbrida combina la tradición
+          arcana de Stephen con la ascendencia Faltine
+          de Clea. Sin embargo, su sangre materna se
+          encuentra considerablemente diluida.
+        </div>
+      </details>
+    </div>
+  </article>
+
+  <article class="event">
+    <div class="event-card">
+      <span class="event-number">II · INFANCIA</span>
+      <h2>Bajo la influencia de Stephen</h2>
+
+      <p>
+        La relación entre padre e hija siempre fue cercana.
+        Stephen se convirtió en su principal figura de
+        inspiración, no solo como padre, sino también
+        como ejemplo a seguir e influencia profesional.
+      </p>
+
+      <p>
+        A través de su estrecha relación, Larissa comenzó
+        a comprender las artes místicas y las complejidades
+        de las relaciones y la vida humana.
+      </p>
+
+      <p>
+        Su padre siempre procuró brindarle conocimientos
+        humanos, intentando que creciera lo más humana
+        posible.
+      </p>
+    </div>
+  </article>
+
+  <article class="event">
+    <div class="event-card">
+      <span class="event-number">III · EL LINAJE MATERNO</span>
+      <h2>La ausencia de Clea</h2>
+
+      <p>
+        Su relación con Clea fue considerablemente
+        diferente. Debido a los constantes viajes de
+        su madre entre dimensiones, nunca llegaron
+        a desarrollar una relación especialmente
+        cercana o maternal.
+      </p>
+
+      <p>
+        Su conocimiento sobre ella se limitó a las
+        visitas esporádicas, las palabras de su padre
+        y aquello que aprendió de su propio linaje.
+      </p>
+
+      <p>
+        Si bien su ascendencia Faltine formaría siempre
+        parte de su identidad, la presencia de su madre
+        no lo haría.
+      </p>
+    </div>
+  </article>
+
+  <article class="event">
+    <div class="event-card">
+      <span class="event-number">IV · FORMACIÓN</span>
+      <h2>La búsqueda de excelencia</h2>
+
+      <p>
+        Conforme crecía, Larissa demostró una búsqueda
+        constante por la excelencia, acompañada de una
+        curiosidad insaciable.
+      </p>
+
+      <p>
+        La inteligencia y el talento de su padre siempre
+        fueron motivo de admiración, pero terminaron
+        convirtiéndose también en una comparación
+        constante.
+      </p>
+
+      <p>
+        Comenzó a desarrollar una necesidad particular
+        de demostrar que poseía las mismas capacidades
+        que él. Sin embargo, Stephen nunca impuso sobre
+        ella las expectativas que Larissa se había
+        impuesto a sí misma.
+      </p>
+    </div>
+  </article>
+
+  <article class="event">
+    <div class="event-card">
+      <span class="event-number">V · EL DESCONTROL</span>
+      <h2>Cuando la magia dejó de obedecer</h2>
+
+      <p>
+        Durante los episodios del Descontrol, Larissa
+        ya era una hechicera experimentada bajo el
+        nombre de Seraphine, trabajando codo a codo
+        con su padre.
+      </p>
+
+      <p>
+        Sin embargo, perdió totalmente el control
+        sobre sus habilidades mágicas. Su magia
+        Faltine provocó que su cabello se volviera
+        blanco, al igual que el de su madre.
+      </p>
+
+      <details>
+        <summary>CONSECUENCIAS DEL DESCONTROL</summary>
+        <div class="detail-content">
+          Hasta el día de hoy, cuando pierde el control,
+          su cabello vuelve a tornarse blanco y deja
+          de poder controlar con exactitud sus hechizos.
+          El episodio dejó también una huella en su
+          relación con sus propias capacidades mágicas.
+        </div>
+      </details>
+    </div>
+  </article>
+
+  <article class="event">
+    <div class="event-card">
+      <span class="event-number">VI · ACTUALIDAD</span>
+      <h2>Una identidad propia</h2>
+
+      <p>
+        Con el paso de los años, Larissa consiguió
+        desarrollar una identidad propia, separándose
+        de la excelencia de su padre y de la sangre
+        de su madre.
+      </p>
+
+      <p>
+        Se convirtió en una persona firme, sociable,
+        amable y capaz de desenvolverse fácilmente
+        en distintos entornos.
+      </p>
+
+      <p>
+        Aun así, continúa siendo profundamente
+        autoexigente. Su relación con Stephen sigue
+        siendo uno de los pilares más importantes
+        de su vida.
+      </p>
+
+      <p>
+        Dentro de ella, sin embargo, permanece una
+        curiosidad furiosa por descubrir el verdadero
+        origen de su madre y conocerse a sí misma
+        con mayor profundidad.
+      </p>
+    </div>
+  </article>
+
+</section>
+
+<div class="quote">
+  <p>
+    «Construir una identidad propia, donde pueda
+    ser conocida por mis propios logros y no por
+    la identidad de mi padre».
+  </p>
+  <span>MOTIVACIÓN · LARISSA KINSLEY STRANGE</span>
+</div>
+
+<nav class="navigation">
+  <a href="profile.html">01 · PERFIL</a>
+  <a href="personality.html">02 · PSICOLOGÍA</a>
+  <a href="abilities.html">03 · HABILIDADES</a>
+  <a href="relations.html">04 · RELACIONES</a>
+  <a href="gallery.html">05 · GALERÍA</a>
+</nav>
+
+<footer>
+  KAMAR-TAJ · ARCHIVO CLASIFICADO
+</footer>
+
+</main>
+
+</body>
+</html>
