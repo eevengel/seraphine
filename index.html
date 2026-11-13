@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Larissa Kinsley Strange | Arcane Archives</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #101a32;
+      color: #f1ebdd;
+      font-family: 'Cormorant Garamond', serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .archive {
+      width: 100%;
+      max-width: 850px;
+      min-height: 650px;
+      border: 1px solid #c5a568;
+      padding: 55px 35px;
+      text-align: center;
+      position: relative;
+      outline: 1px solid #c5a568;
+      outline-offset: 7px;
+    }
+
+    .symbol {
+      color: #c5a568;
+      font-size: 48px;
+      margin-bottom: 25px;
+    }
+
+    .eyebrow {
+      font-family: 'Cinzel', serif;
+      color: #c5a568;
+      letter-spacing: 4px;
+      font-size: 11px;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(30px, 6vw, 55px);
+      font-weight: 400;
+      letter-spacing: 3px;
+      margin: 25px 0 10px;
+    }
+
+    .subtitle {
+      color: #c5a568;
+      font-style: italic;
+      font-size: 20px;
+    }
+
+    .divider {
+      width: 120px;
+      height: 1px;
+      background: #c5a568;
+      margin: 35px auto;
+    }
+
+    .quote {
+      font-size: 23px;
+      font-style: italic;
+      max-width: 500px;
+      margin: auto;
+      line-height: 1.5;
+    }
+
+    .navigation {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      max-width: 540px;
+      margin: 45px auto;
+    }
+
+    .navigation a {
+      color: #f1ebdd;
+      text-decoration: none;
+      border: 1px solid #806b48;
+      padding: 15px 10px;
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      transition: .3s;
+    }
+
+    .navigation a:hover {
+      background: #c5a568;
+      color: #101a32;
+      box-shadow: 0 0 18px #c5a56855;
+    }
+
+    footer {
+      color: #c5a568;
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+    }
+
+    @media (max-width: 500px) {
+      .archive {
+        padding: 40px 15px;
+      }
+
+      .navigation {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="archive">
+
+    <div class="symbol">✧</div>
+
+    <p class="eyebrow">ARCHIVUM MYSTICUM</p>
+
+    <h1>Larissa Kinsley Strange</h1>
+
+    <p class="subtitle">
+      Un registro de lo extraordinario
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="quote">
+      «Entre lo conocido y lo imposible,
+      existe un lugar donde la magia encuentra su propósito».
+    </p>
+
+    <nav class="navigation">
+      <a href="profile.html">01 · Perfil</a>
+      <a href="history.html">02 · Historia</a>
+      <a href="abilities.html">03 · Habilidades</a>
+      <a href="personality.html">04 · Personalidad</a>
+      <a href="relations.html">05 · Relaciones</a>
+      <a href="gallery.html">06 · Galería</a>
+    </nav>
+
+    <footer>
+      KAMAR-TAJ · ARCHIVO CLASIFICADO
+    </footer>
+
+  </main>
+
+</body>
+</html>
