@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Larissa Strange | Relaciones</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #101a32;
+  color: #f1ebdd;
+  font-family: 'Cormorant Garamond', serif;
+  padding: 35px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 950px;
+  margin: auto;
+  border: 1px solid #c5a568;
+  outline: 1px solid #c5a568;
+  outline-offset: 6px;
+  padding: 40px;
+}
+
+a {
+  color: #c5a568;
+  text-decoration: none;
+}
+
+a:hover { color: white; }
+
+.back {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+header {
+  text-align: center;
+  padding: 55px 0 35px;
+}
+
+.symbol {
+  color: #c5a568;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  font-family: 'Cinzel', serif;
+  color: #c5a568;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 18px 0;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-style: italic;
+  color: #c5a568;
+}
+
+.divider {
+  width: 100px;
+  height: 1px;
+  background: #c5a568;
+  margin: 28px auto;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.section-title {
+  color: #c5a568;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin: 40px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #806b48;
+}
+
+/* ÁRBOL FAMILIAR */
+
+.family-tree {
+  text-align: center;
+  padding: 15px 0 35px;
+}
+
+.tree-root {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.parent {
+  width: 210px;
+  padding: 22px;
+  background: #172440;
+  border: 1px solid #806b48;
+  transition: .3s;
+}
+
+.parent:hover {
+  border-color: #e4c98f;
+  transform: translateY(-4px);
+}
+
+.parent .icon {
+  font-size: 30px;
+  color: #c5a568;
+  margin-bottom: 12px;
+}
+
+.parent span {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #c5a568;
+  margin-bottom: 8px;
+}
+
+.parent h3 {
+  font-size: 17px;
+}
+
+.tree-lines {
+  color: #c5a568;
+  font-size: 26px;
+  line-height: 1.7;
+}
+
+.tree-center {
+  display: inline-block;
+  background: #202f4c;
+  border: 1px solid #c5a568;
+  padding: 20px 45px;
+  min-width: 230px;
+}
+
+.tree-center .icon {
+  color: #c5a568;
+  font-size: 28px;
+}
+
+.tree-center h2 {
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.tree-center p {
+  color: #c5a568;
+  font-style: italic;
+  font-size: 17px;
+}
+
+/* RELACIONES */
+
+.relation {
+  background: #172440;
+  border: 1px solid #45516a;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.relation:hover {
+  border-color: #c5a568;
+}
+
+.relation-header {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  background: linear-gradient(110deg, #1d2d4a, #172440);
+}
+
+.relation-header h3 {
+  font-size: 23px;
+}
+
+.relation-header span {
+  font-family: 'Cinzel', serif;
+  color: #c5a568;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.relation-body {
+  padding: 25px;
+}
+
+.relation-body p {
+  font-size: 19px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.relation-body p + p {
+  margin-top: 14px;
+}
+
+.relation-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tag {
+  border: 1px solid #806b48;
+  color: #c5a568;
+  padding: 7px 12px;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+/* VÍNCULO */
+
+.quote {
+  text-align: center;
+  padding: 35px 20px;
+  margin: 45px 0;
+  border-top: 1px solid #806b48;
+  border-bottom: 1px solid #806b48;
+}
+
+.quote p {
+  font-size: 23px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.quote span {
+  display: block;
+  color: #c5a568;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 15px;
+}
+
+/* FUTUROS VÍNCULOS */
+
+.future {
+  border: 1px dashed #806b48;
+  padding: 30px;
+  text-align: center;
+  background: #141f38;
+}
+
+.future .icon {
+  font-size: 30px;
+  color: #c5a568;
+  margin-bottom: 12px;
+}
+
+.future h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.future p {
+  font-size: 18px;
+  color: #b9bdca;
+  line-height: 1.5;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 45px;
+}
+
+.navigation a {
+  border: 1px solid #806b48;
+  padding: 13px 18px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.navigation a:hover {
+  background: #c5a568;
+  color: #101a32;
+}
+
+footer {
+  text-align: center;
+  color: #c5a568;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 55px;
+}
+
+@media(max-width: 600px) {
+  .container { padding: 22px; }
+  .parent { width: 100%; }
+}
+</style>
+</head>
+
+<body>
+
+<main class="container">
+
+<a class="back" href="index.html">← VOLVER AL ARCHIVO</a>
+
+<header>
+  <div class="symbol">✧ ♡ ✧</div>
+  <p class="eyebrow">ARCHIVUM · CONEXIONES</p>
+  <h1>Vínculos y relaciones</h1>
+  <p class="subtitle">Los lazos que definen una existencia</p>
+  <div class="divider"></div>
+  <p class="eyebrow">REGISTRO DE VÍNCULOS Nº 005</p>
+</header>
+
+<div class="intro">
+  Ninguna existencia se construye en soledad.
+  Algunas personas representan un hogar, otras
+  un misterio. Algunas dejan huellas que perduran
+  incluso en su ausencia.
+</div>
+
+<h2 class="section-title">I. Linaje familiar</h2>
+
+<section class="family-tree">
+
+  <div class="tree-root">
+
+    <div class="parent">
+      <div class="icon">✧</div>
+      <span>FIGURA PATERNA</span>
+      <h3>Stephen Strange</h3>
+    </div>
+
+    <div class="parent">
+      <div class="icon">☽</div>
+      <span>FIGURA MATERNA</span>
+      <h3>Clea</h3>
+    </div>
+
+  </div>
+
+  <div class="tree-lines">╲　　╱</div>
+
+  <div class="tree-center">
+    <div class="icon">⟡</div>
+    <h2>Larissa Kinsley Strange</h2>
+    <p>The Seraphine</p>
+  </div>
+
+</section>
+
+<h2 class="section-title">II. Relaciones familiares</h2>
+
+<!-- STEPHEN -->
+
+<article class="relation">
+
+  <div class="relation-header">
+    <div>
+      <span>VÍNCULO Nº 001</span>
+      <h3>Stephen Strange</h3>
+    </div>
+    <span>PADRE</span>
+  </div>
+
+  <div class="relation-body">
+
+    <p>
+      La relación entre padre e hija siempre fue cercana.
+      Stephen se convirtió en su principal figura de
+      inspiración durante su vida, no solo como un padre,
+      sino como un ejemplo a seguir e influencia profesional.
+    </p>
+
+    <p>
+      A través de su estrecha relación con él, Larissa
+      comprendió las artes místicas y las complejidades
+      de las relaciones y la vida humana. Su padre siempre
+      procuró brindarle conocimientos humanos, intentando
+      que creciera lo más humana posible.
+    </p>
+
+    <p>
+      Su relación ha sido y será uno de los pilares más
+      importantes de su vida. Sin embargo, la admiración
+      que siente por Stephen también se convirtió en una
+      comparación constante, alimentando su necesidad
+      de demostrar que posee las mismas capacidades
+      que él.
+    </p>
+
+    <div class="relation-meta">
+      <span class="tag">ADMIRACIÓN</span>
+      <span class="tag">INSPIRACIÓN</span>
+      <span class="tag">CERCANÍA</span>
+      <span class="tag">LEGADO</span>
+    </div>
+
+  </div>
+
+</article>
+
+<!-- CLEA -->
+
+<article class="relation">
+
+  <div class="relation-header">
+    <div>
+      <span>VÍNCULO Nº 002</span>
+      <h3>Clea</h3>
+    </div>
+    <span>MADRE</span>
+  </div>
+
+  <div class="relation-body">
+
+    <p>
+      Su relación con Clea fue considerablemente
+      diferente. Debido a que su madre viajaba
+      constantemente entre dimensiones, nunca
+      llegaron a desarrollar una relación especialmente
+      cercana o maternal.
+    </p>
+
+    <p>
+      El conocimiento que Larissa posee sobre ella
+      se limita a las visitas esporádicas, las palabras
+      de su padre y aquello que ha aprendido de su
+      propio linaje.
+    </p>
+
+    <p>
+      Si bien su ascendencia Faltine forma parte
+      de su identidad, la presencia de su madre no.
+      Aun así, permanece dentro de ella una curiosidad
+      profunda por descubrir sus verdaderos orígenes.
+    </p>
+
+    <div class="relation-meta">
+      <span class="tag">DISTANCIA</span>
+      <span class="tag">AUSENCIA</span>
+      <span class="tag">CURIOSIDAD</span>
+      <span class="tag">LINAJE FALTINE</span>
+    </div>
+
+  </div>
+
+</article>
+
+<h2 class="section-title">III. Otros vínculos</h2>
+
+
+<div class="relation">
+
+  <div class="relation-header">
+    <span class="eyebrow">VÍNCULO · AMISTAD</span>
+    <h3>Rebecca Barnes</h3>
+  </div>
+
+  <div class="relation-body">
+
+    <p>
+      Larissa conoció a Rebecca al llegar a Amphora,
+      y desde entonces construyeron una amistad que
+      se consolidó dentro de la academia.
+    </p>
+
+    <p>
+      Juntas forman parte de uno de los grupos más
+      destacados y reconocidos de la institución.
+      Su vínculo se caracteriza por el apoyo y la
+      complicidad mutua, incluso cuando la naturaleza
+      competitiva de Seraphine se hace presente.
+    </p>
+
+    <p>
+      A pesar de sus diferencias, ambas saben
+      acompañarse y respaldarse.
+    </p>
+
+    <div class="tag">AMISTAD</div>
+    <div class="tag">AMPHORA</div>
+    <div class="tag">COMPLICIDAD</div>
+
+  </div>
+
+</div>
+
+<div class="quote">
+  <p>
+    «Una identidad propia, más allá de la sangre
+    y del legado».
+  </p>
+  <span>ARCHIVO PERSONAL · THE SERAPHINE</span>
+</div>
+
+<nav class="navigation">
+  <a href="profile.html">01 · PERFIL</a>
+  <a href="history.html">02 · HISTORIA</a>
+  <a href="personality.html">03 · PSICOLOGÍA</a>
+  <a href="abilities.html">04 · HABILIDADES</a>
+  <a href="gallery.html">05 · GALERÍA</a>
+</nav>
+
+<footer>
+  KAMAR-TAJ · ARCHIVO CLASIFICADO
+</footer>
+
+</main>
+
+</body>
+</html>
