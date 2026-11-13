@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Larissa Strange | Habilidades</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #101a32;
+  color: #f1ebdd;
+  font-family: 'Cormorant Garamond', serif;
+  padding: 35px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 950px;
+  margin: auto;
+  border: 1px solid #c5a568;
+  outline: 1px solid #c5a568;
+  outline-offset: 6px;
+  padding: 40px;
+}
+
+a {
+  color: #c5a568;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.back {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+header {
+  text-align: center;
+  padding: 55px 0 35px;
+}
+
+.symbol {
+  color: #c5a568;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  font-family: 'Cinzel', serif;
+  color: #c5a568;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 18px 0;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-style: italic;
+  color: #c5a568;
+}
+
+.divider {
+  width: 100px;
+  height: 1px;
+  background: #c5a568;
+  margin: 28px auto;
+}
+
+.intro {
+  max-width: 680px;
+  margin: 0 auto 45px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.section-title {
+  color: #c5a568;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 38px 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #806b48;
+}
+
+/* CLASIFICACIÓN */
+
+.classification {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.class-card {
+  background: #172440;
+  border: 1px solid #45516a;
+  padding: 22px 12px;
+  text-align: center;
+  transition: .3s;
+}
+
+.class-card:hover {
+  border-color: #c5a568;
+  transform: translateY(-3px);
+}
+
+.class-card span {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #c5a568;
+  margin-bottom: 12px;
+}
+
+.class-card strong {
+  font-family: 'Cinzel', serif;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.class-card p {
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+/* DISCIPLINAS */
+
+.discipline {
+  background: #172440;
+  border: 1px solid #45516a;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.discipline-header {
+  padding: 25px;
+  border-bottom: 1px solid #45516a;
+  background: linear-gradient(110deg, #1a2b4b, #172440);
+}
+
+.discipline-number {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #c5a568;
+}
+
+.discipline-header h3 {
+  font-size: 27px;
+  margin: 10px 0;
+}
+
+.discipline-header p {
+  font-size: 18px;
+  font-style: italic;
+  color: #c5a568;
+}
+
+.discipline-content {
+  padding: 24px;
+}
+
+.discipline-content p {
+  font-size: 19px;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.subsection {
+  margin-top: 22px;
+  padding-top: 17px;
+  border-top: 1px solid #45516a;
+}
+
+.subsection h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  color: #c5a568;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+details {
+  background: #101a32;
+  border: 1px solid #45516a;
+  margin-top: 10px;
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 15px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "＋";
+  float: right;
+  color: #c5a568;
+}
+
+details[open] summary::after {
+  content: "−";
+}
+
+.detail-text {
+  border-top: 1px solid #45516a;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.detail-text ul {
+  padding-left: 20px;
+}
+
+.detail-text li {
+  margin-bottom: 8px;
+}
+
+/* CATALIZADOR */
+
+.artifact {
+  background: #172440;
+  border: 1px solid #806b48;
+  padding: 25px;
+  text-align: center;
+}
+
+.artifact-symbol {
+  color: #c5a568;
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.artifact h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.artifact p {
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+/* COSTOS */
+
+.cost-box {
+  background: #172440;
+  border-left: 2px solid #c5a568;
+  padding: 23px;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+/* ESTADÍSTICAS */
+
+.stats {
+  background: #172440;
+  border: 1px solid #45516a;
+  padding: 25px;
+}
+
+.stat {
+  margin-bottom: 22px;
+}
+
+.stat:last-child {
+  margin-bottom: 0;
+}
+
+.stat-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.stat-heading span:first-child {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.stat-heading span:last-child {
+  color: #c5a568;
+  font-size: 16px;
+}
+
+.bar {
+  height: 7px;
+  background: #303d55;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #8d7141, #e0c58d);
+  animation: grow 1.3s ease both;
+  transform-origin: left;
+}
+
+@keyframes grow {
+  from { width: 0; }
+}
+
+.stats-note {
+  color: #aaaebe;
+  font-size: 14px;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 45px;
+}
+
+.navigation a {
+  border: 1px solid #806b48;
+  padding: 13px 18px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.navigation a:hover {
+  background: #c5a568;
+  color: #101a32;
+}
+
+footer {
+  text-align: center;
+  color: #c5a568;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 55px;
+}
+
+@media(max-width: 600px) {
+  .container {
+    padding: 22px;
+  }
+
+  .classification {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="container">
+
+<a class="back" href="index.html">← VOLVER AL ARCHIVO</a>
+
+<header>
+  <div class="symbol">⟡ ◈ ⟡</div>
+
+  <p class="eyebrow">ARCHIVUM · ARTES MYSTICAE</p>
+
+  <h1>Habilidades y poderes</h1>
+
+  <p class="subtitle">El estudio de la magia híbrida</p>
+
+  <div class="divider"></div>
+
+  <p class="eyebrow">REGISTRO MÁGICO Nº 004</p>
+</header>
+
+<div class="intro">
+  Una combinación de hechicería arcana y herencia
+  Faltine. Su especialidad reside en el reconocimiento
+  del entorno y la elaboración de estrategias,
+  antes que en el enfrentamiento físico.
+</div>
+
+<!-- CLASIFICACIÓN -->
+
+<h2 class="section-title">I. Clasificación mágica</h2>
+
+<div class="classification">
+
+  <div class="class-card">
+    <span>TIPO DE PODER</span>
+    <strong>Híbrido</strong>
+    <p>Arcano / Faltine</p>
+  </div>
+
+  <div class="class-card">
+    <span>NIVEL DE PODER</span>
+    <strong>02 / 03</strong>
+    <p>Intermedio</p>
+  </div>
+
+  <div class="class-card">
+    <span>CLASIFICACIÓN</span>
+    <strong>Estratega</strong>
+    <p>Reconocimiento y planificación</p>
+  </div>
+
+  <div class="class-card">
+    <span>CONTROL</span>
+    <strong>02 / 03</strong>
+    <p>Intermedio</p>
+  </div>
+
+  <div class="class-card">
+    <span>RANGO</span>
+    <strong>C</strong>
+    <p>Clasificación registrada</p>
+  </div>
+
+  <div class="class-card">
+    <span>ESPECIALIDAD</span>
+    <strong>Magia</strong>
+    <p>Manipulación mística</p>
+  </div>
+
+</div>
+
+<!-- PORTALES -->
+
+<h2 class="section-title">II. Disciplinas registradas</h2>
+
+<section class="discipline">
+
+  <div class="discipline-header">
+    <span class="discipline-number">HABILIDAD Nº 01</span>
+    <h3>Portales</h3>
+    <p>Manipulación espacial · Desplazamiento</p>
+  </div>
+
+  <div class="discipline-content">
+
+    <p>
+      Capacidad para abrir portales que conectan dos
+      ubicaciones diferentes, permitiéndole trasladarse
+      instantáneamente de un lugar a otro.
+      Puede utilizarlos para transportarse a sí misma
+      o llevar consigo a otras personas y objetos.
+    </p>
+
+    <div class="subsection">
+      <h4>ALCANCE Y FUNCIONAMIENTO</h4>
+
+      <p>
+        Actualmente, solo puede transportarse a lugares
+        no tan lejanos, como dentro de la ciudad.
+        Únicamente durante el Descontrol consiguió
+        transportarse a otras ubicaciones.
+      </p>
+    </div>
+
+    <details>
+      <summary>LIMITACIONES Y DEBILIDADES</summary>
+      <div class="detail-text">
+        <ul>
+          <li>La apertura de portales requiere concentración y un gasto considerable de energía, especialmente al conectar ubicaciones distantes.</li>
+          <li>Necesita conocer o identificar adecuadamente el destino.</li>
+          <li>Una referencia imprecisa puede provocar errores en la ubicación de salida.</li>
+          <li>Si pierde la concentración, el portal puede cerrarse rápidamente sin completar su función.</li>
+          <li>Actualmente no puede crear portales entre dimensiones.</li>
+        </ul>
+      </div>
+    </details>
+
+  </div>
+
+</section>
+
+<!-- LAZO FALTINE -->
+
+<section class="discipline">
+
+  <div class="discipline-header">
+    <span class="discipline-number">HABILIDAD Nº 02</span>
+    <h3>Lazo Faltine</h3>
+    <p>Conjuración energética · Inmovilización</p>
+  </div>
+
+  <div class="discipline-content">
+
+    <p>
+      Capacidad para conjurar un lazo de energía
+      mística inspirado en las llamas de los Faltine,
+      que puede utilizar para sujetar, inmovilizar y
+      restringir los movimientos de sus objetivos.
+    </p>
+
+    <p style="margin-top:15px;">
+      Su forma y longitud pueden modificarse según
+      las necesidades de Larissa, permitiéndole
+      atrapar o mantener a distancia tanto a personas
+      como a determinadas criaturas.
+    </p>
+
+    <p style="margin-top:15px;">
+      La energía del lazo puede manifestarse como
+      una cuerda flexible o tensarse para dificultar
+      cualquier intento de liberación.
+    </p>
+
+    <details>
+      <summary>LIMITACIONES Y DEBILIDADES</summary>
+      <div class="detail-text">
+        <ul>
+          <li>Requiere concentración para mantener su forma y controlar sus movimientos.</li>
+          <li>Su resistencia depende de la cantidad de energía que Larissa emplee al conjurarlo.</li>
+          <li>Puede romperse si el objetivo ejerce una fuerza superior a la que puede sostener.</li>
+        </ul>
+      </div>
+    </details>
+
+  </div>
+
+</section>
+
+<!-- CATALIZADOR -->
+
+<h2 class="section-title">III. Artefactos y catalizadores</h2>
+
+<div class="artifact">
+
+  <div class="artifact-symbol">◈</div>
+
+  <h3>Anillo de Honda</h3>
+
+  <p>
+    Si bien gracias a la sangre Faltine heredada
+    de su madre puede generar portales por sí sola,
+    requiere el anillo de Honda para canalizar e
+    intensificar su poder.
+  </p>
+
+</div>
+
+<!-- COSTOS -->
+
+<h2 class="section-title">IV. Costos de utilización</h2>
+
+<div class="cost-box">
+  El uso repetido de sus habilidades mágicas genera
+  dolores de cabeza, fatiga, cansancio y malestar físico.
+
+  <br><br>
+
+  Una utilización excesiva puede provocar dolores
+  extremos, aneurismas y desmayos.
+</div>
+
+<!-- STATS -->
+
+<h2 class="section-title">V. Parámetros físicos y mágicos</h2>
+
+<div class="stats">
+
+  <div class="stat">
+    <div class="stat-heading">
+      <span>FUERZA</span>
+      <span>3 / 10</span>
+    </div>
+    <div class="bar"><div class="fill" style="width:30%"></div></div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-heading">
+      <span>VELOCIDAD</span>
+      <span>4 / 10</span>
+    </div>
+    <div class="bar"><div class="fill" style="width:40%"></div></div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-heading">
+      <span>INTELIGENCIA</span>
+      <span>8 / 10</span>
+    </div>
+    <div class="bar"><div class="fill" style="width:80%"></div></div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-heading">
+      <span>RESISTENCIA</span>
+      <span>6 / 10</span>
+    </div>
+    <div class="bar"><div class="fill" style="width:60%"></div></div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-heading">
+      <span>CONTROL DE PODER</span>
+      <span>2 / 10</span>
+    </div>
+    <div class="bar"><div class="fill" style="width:20%"></div></div>
+  </div>
+
+  <p class="stats-note">
+    Escala de valoración: 1 a 10. Inventario pendiente
+    de completar por el staff.
+  </p>
+
+</div>
+
+<nav class="navigation">
+  <a href="profile.html">01 · PERFIL</a>
+  <a href="history.html">02 · HISTORIA</a>
+  <a href="personality.html">03 · PSICOLOGÍA</a>
+  <a href="relations.html">04 · RELACIONES</a>
+  <a href="gallery.html">05 · GALERÍA</a>
+</nav>
+
+<footer>
+  KAMAR-TAJ · ARCHIVO CLASIFICADO
+</footer>
+
+</main>
+
+</body>
+</html>
